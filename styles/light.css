@@ -1,12 +1,111 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root.theme-light {
+  --header-color: #db00ff;
+    --main-color: #ff8dcb;
+    --theme-color: #fff1f7;
+    --text-color: #353430;
+    --main-font: "IBM Plex mono";
+}
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --header-color: #db00ff;
+    --main-color: #ff8dcb;
+    --theme-color: #fff1f7;
+    --text-color: #353430;
+    --main-font: "IBM Plex mono";
+  }
+
+  a {
+    color: var(--text-color);
+    text-shadow: 1px 1px var(--main-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1px solid var(--text-color);
+  }
+  
+  a:focus {
+    border: 1px solid var(--text-color);
+  }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .main-title {
+    color: var(--main-color);
+    text-shadow: 5px 5px var(--header-color);
+  }
+
+  .title {
+    color: var(--text-color);
+  }
+
+  .subtitle {
+    color: var(--text-color);
+  }
+
+  .text {
+    color: var(--text-color);
+  }
+
+  .sentence-title {
+    color: var(--text-color);
+  }
+
+  .header__theme-menu {
+    color: var(--text-color);
+  }
+
+  .rec {
+    color: var(--text-color);
+  }
+
+  .rec:before {
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
+
+  .rec:after {
+    background-color: var(--text-color);
+    box-shadow: var(--text-color);
+  }
+
+  .sentence-title::before {
+    border-left: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .header__theme-menu-button:active {
+    border: 1px solid var(--text-color);
+  }
+  
+  .header__theme-menu-button:hover {
+    border: 1px solid var(--text-color);
+  }
+  
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .footer-text {
+    color: var(--main-color);
+    text-shadow: 5px 5px var(--header-color);
+  }
+
+  .footer::after {
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
+
+  .footer:before {
+    border-left: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+  }
 }

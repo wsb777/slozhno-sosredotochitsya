@@ -1,5 +1,456 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+a {
+  text-shadow: 1px 1px var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px solid var(--text-color);
+}
+
+a:focus {
+  border: 1px solid var(--text-color);
+}
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(../images/cover-image.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--theme-color);
+  padding: 10px;
+}
+
+.header__theme-menu {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.decorated-zone {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: end;
+  gap: 42px;
+}
+
+.header__theme-menu-button {
+  background: none;
+  border: none;
+  padding: 0 15px;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:active {
+  border: 1px solid var(--main-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--main-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  margin-top: 62px;
+}
+
+.main-title {
+  color: var(--header-color);
+  font-family: var(--main-font);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 96px;
+  text-shadow: 5px 5px var(--main-color);
+}
+
+.sentence-title {
+  color: var(--theme-color);
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  margin-bottom: 57px;
+}
+
+.sentence-title::before {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-bottom: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+  content: "";
+  margin-top: 149px;
+}
+
+.text {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
+.title {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  /* display: flex;
+  flex-direction: column;
+  gap: 30px; */
+}
+
+.subtitle {
+  color: var(--theme-color);
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.method {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-method {
+  color: var(--theme-color);
+  font-family: var(--main-font);
+  background-color: var(--main-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.text-method {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.5px;
+}
+
+.rec {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+  min-width: 60px;
+}
+
+.rec::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: var(--main-color);
+  box-shadow: 0px 0px 10px var(--main-color);
+  border-radius: 100%;
+  content: "";
+  margin-top: -18px;
+  margin-left: 40px;
+}
+
+.rec::before {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-top: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
+  content: "";
+  margin-left: 33px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery {
+  gap: 10px;
+}
+
+.pictures img {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 667px;
+}
+
+.footer:after {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-top: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
+  content: "";
+  margin-right: -331px;
+  margin-bottom: 560px;
+}
+
+.footer:before {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-bottom: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+  content: "";
+  margin-left: -331px;
+  margin-top: 680px;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  color: var(--header-color);
+  font-family: var(--main-font);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 96px;
+  text-align: center;
+  margin-top: 70px;
+  text-shadow: 3px 3px var(--main-color);
+}
+
+@media (768px <= width) {
+  
+  .main-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .page {
+    padding: 20px;
+  }
+
+  .decorated-zone {
+    gap: 149px;
+  }
+
+  .title-section {
+    margin-top: 171px;
+    margin-left: -20px;
+    gap: 163px;
+  }
+
+  .sentence-title {
+    align-self: end;
+    width: 48.8%;
+    margin-bottom: 165px;
+  }
+
+  .sentence-title::before {
+    margin-top: 253px;
+    margin-left: -363px;
+  }
+
+  .problems {
+    flex-direction: row;
+  }
+
+  .problems .content {
+    width: 97.8%;
+  }
+
+  .triggers .title {
+    width: 30%;
+  }
+
+  .advices {
+    flex-direction: row;
+  }
+
+  .advices .content {
+    width: 224%;
+  }
+
+  .gallery {
+    gap: 21px;
+  }
+
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .books {
+    grid-area: books;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .street {
+    grid-area: street;
+  }
+
+  .pictures {
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    grid-row: 192px 230px 318px;
+    gap: 20px;
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape  books ice-cream"
+      "tape street street";
+  }
+
+  .pictures img {
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .pictures .tape,
+  .pictures .ice-cream {
+    height: 100%;
+  }
+
+  .footer {
+    height: 1052px;
+  }
+
+  .footer::before {
+    margin-left: -706px;
+    margin-top: 1029px;
+  }
+
+  .footer::after {
+    margin-right: -702px;
+    margin-bottom: 888px;
+  }
+
+  .footer-text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (1024px <= width) {
+  main {
+    gap: 80px;
+  }
+
+  .header__theme-menu {
+    grid-area: nav;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header__theme-menu-button {
+    padding: 2px 13px;
+  }
+
+  .rec {
+    grid-area: div;
+    justify-self: end;
+  }
+
+  .decorated-zone {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". nav div";
+  }
+
+  .title-section {
+    margin-top: 280px;
+    gap: 134px;
+  }
+
+  .sentence-title {
+    margin-bottom: 114px;
+  }
+
+  .sentence-title::before {
+    margin-top: 158px;
+    margin-left: -494px;
+  }
+
+  .problems .content {
+    width: 75%;
+  }
+
+  .triggers .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .advices .content {
+    width: 170%;
+  }
+
+  .footer {
+    height: 793px;
+  }
+
+  .footer:before {
+    margin-left: -961px;
+    margin-top: 776px;
+  }
+
+  .footer::after {
+    margin-right: -958px;
+    margin-bottom: 630px;
+  }
+  
 }
