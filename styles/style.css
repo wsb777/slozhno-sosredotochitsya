@@ -1,4 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+header,
+footer {
+  height: 67.3vh;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -55,14 +60,14 @@ a:focus {
 
 .decorated-zone {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: end;
   gap: 42px;
 }
 
 .header__theme-menu-button {
   background: none;
-  border: none;
+  border: 1px solid #ffffff00;
   padding: 0 15px;
   text-transform: lowercase;
 }
@@ -82,8 +87,9 @@ a:focus {
 .title-section {
   display: flex;
   flex-direction: column;
-  gap: 55px;
-  margin-top: 62px;
+  gap: 54px;
+  margin-top: 31px;
+  margin-bottom: 41px;
 }
 
 .main-title {
@@ -103,7 +109,6 @@ a:focus {
   font-weight: 700;
   line-height: 23px;
   letter-spacing: 0em;
-  margin-bottom: 57px;
 }
 
 .sentence-title::before {
@@ -131,9 +136,6 @@ a:focus {
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
-  /* display: flex;
-  flex-direction: column;
-  gap: 30px; */
 }
 
 .subtitle {
@@ -218,6 +220,11 @@ a:focus {
   gap: 10px;
 }
 
+.pictures {
+  display: grid;
+  gap: 9px;
+}
+
 .pictures img {
   width: 100%;
 }
@@ -267,7 +274,15 @@ a:focus {
 }
 
 @media (768px <= width) {
-  
+  header,
+  footer {
+    height: 103vh;
+  }
+
+  main {
+    gap: 81px;
+  }
+
   .main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -281,15 +296,15 @@ a:focus {
   }
 
   .title-section {
-    margin-top: 171px;
+    margin-top: 32px;
     margin-left: -20px;
     gap: 163px;
+    margin-bottom: 70px;
   }
 
   .sentence-title {
     align-self: end;
     width: 48.8%;
-    margin-bottom: 165px;
   }
 
   .sentence-title::before {
@@ -318,7 +333,7 @@ a:focus {
   }
 
   .gallery {
-    gap: 21px;
+    gap: 17px;
   }
 
   .sunset {
@@ -383,7 +398,13 @@ a:focus {
 }
 
 @media (1024px <= width) {
+  header,
+  footer {
+    height: 67vh;
+  }
+
   main {
+    margin-top: 113px;
     gap: 80px;
   }
 
@@ -406,19 +427,22 @@ a:focus {
     justify-self: end;
   }
 
+  .title-section {
+    grid-area: title;
+  }
+
   .decorated-zone {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: ". nav div";
+    grid-row-gap: 10px;
+    grid-template-areas:
+      ". nav div"
+      "title title title";
   }
 
   .title-section {
     margin-top: 280px;
     gap: 134px;
-  }
-
-  .sentence-title {
-    margin-bottom: 114px;
   }
 
   .sentence-title::before {
@@ -439,6 +463,10 @@ a:focus {
     width: 170%;
   }
 
+  .gallery {
+    gap: 21px;
+  }
+
   .footer {
     height: 793px;
   }
@@ -452,5 +480,4 @@ a:focus {
     margin-right: -958px;
     margin-bottom: 630px;
   }
-  
 }
