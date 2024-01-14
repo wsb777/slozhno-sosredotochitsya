@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 header,
 footer {
-  height:100vh;
+  height: 100vh;
 }
 
 main {
@@ -273,7 +273,6 @@ a:focus {
 }
 
 @media (768px <= width) {
-
   main {
     margin-top: 177px;
     gap: 81px;
