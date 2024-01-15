@@ -59,9 +59,13 @@
   color: var(--text-color);
 }
 
+.page.theme_light .header__theme-menu-button_active {
+  outline: 1px solid var(--text-color);
+}
+
 .page.theme_light .rec {
   color: var(--text-color);
-  font-size:0;
+  font-size: 0;
 }
 
 .page.theme_light .rec:before {
