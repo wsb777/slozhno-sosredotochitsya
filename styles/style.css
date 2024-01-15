@@ -1,7 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 header,
 footer {
-  height: 100vh;
+  min-height: 687px;
+  max-height: 100vh;
 }
 
 main {
@@ -43,7 +44,7 @@ a:focus {
 }
 
 .header__theme-menu {
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
@@ -84,6 +85,10 @@ a:focus {
   border-bottom: 1px solid var(--main-color);
 }
 
+.header__theme-menu-button:focus-visible {
+  outline: none;
+}
+
 .title-section {
   display: flex;
   flex-direction: column;
@@ -94,7 +99,7 @@ a:focus {
 
 .main-title {
   color: var(--header-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 96px;
@@ -104,7 +109,7 @@ a:focus {
 .sentence-title {
   color: var(--theme-color);
   background-color: var(--main-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
@@ -124,7 +129,7 @@ a:focus {
 
 .text {
   color: var(--text-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -132,7 +137,7 @@ a:focus {
 
 .title {
   color: var(--main-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
@@ -141,7 +146,7 @@ a:focus {
 .subtitle {
   color: var(--theme-color);
   background-color: var(--main-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
@@ -155,7 +160,7 @@ a:focus {
 
 .name-method {
   color: var(--theme-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   background-color: var(--main-color);
   font-size: 18px;
   font-weight: 400;
@@ -164,7 +169,7 @@ a:focus {
 
 .text-method {
   color: var(--text-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.5px;
@@ -172,7 +177,7 @@ a:focus {
 
 .rec {
   color: var(--main-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -263,7 +268,7 @@ a:focus {
   display: flex;
   align-items: center;
   color: var(--header-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 96px;
@@ -273,7 +278,14 @@ a:focus {
 }
 
 @media (768px <= width) {
+  header,
+  footer {
+    padding-left: 20px;
+    min-height: 877px;
+  }
+
   main {
+    padding-left: 20px;
     margin-top: 177px;
     gap: 81px;
   }
@@ -283,7 +295,7 @@ a:focus {
   }
 
   .page {
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
   }
 
   .decorated-zone {
@@ -291,10 +303,10 @@ a:focus {
   }
 
   .title-section {
-    margin-top: 32px;
+    margin-top: 29px;
     margin-left: -20px;
     gap: 163px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
   }
 
   .sentence-title {
@@ -305,6 +317,14 @@ a:focus {
   .sentence-title::before {
     margin-top: 253px;
     margin-left: -363px;
+  }
+
+  .header__theme-menu-list {
+    gap: 11px;
+  }
+
+  .header__theme-menu-button {
+    padding: 2px 12px;
   }
 
   .problems {
@@ -388,12 +408,18 @@ a:focus {
 }
 
 @media (1024px <= width) {
+  header,
+  footer {
+    min-height: 539px;
+  }
+
   main {
     margin-top: 113px;
     gap: 80px;
   }
 
   .header__theme-menu {
+    align-self: start;
     grid-area: nav;
   }
 
@@ -408,11 +434,15 @@ a:focus {
   }
 
   .rec {
+    align-self: start;
     grid-area: div;
     justify-self: end;
   }
 
   .title-section {
+    align-self: start;
+    margin-top: 279px;
+    gap: 132px;
     grid-area: title;
   }
 
@@ -423,11 +453,6 @@ a:focus {
     grid-template-areas:
       ". nav div"
       "title title title";
-  }
-
-  .title-section {
-    margin-top: 280px;
-    gap: 134px;
   }
 
   .sentence-title::before {
@@ -453,16 +478,16 @@ a:focus {
   }
 
   .footer-text {
-    margin-top: 190px;
+    margin-top: 326px;
   }
 
   .footer:before {
-    margin-left: -959px;
-    margin-top: 893px;
+    margin-left: -960px;
+    margin-top: 1029px;
   }
 
   .footer::after {
-    margin-right: -963px;
-    margin-bottom: 512px;
+    margin-left: 255px;
+    margin-top: 337px;
   }
 }

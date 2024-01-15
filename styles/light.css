@@ -51,6 +51,10 @@
   color: var(--text-color);
 }
 
+.page.theme_light .name-method {
+  color: var(--text-color);
+}
+
 .page.theme_light .header__theme-menu {
   color: var(--text-color);
 }
@@ -99,6 +103,14 @@
 .page.theme_light .footer:before {
   border-left: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
+}
+
+.page.theme_light .rec {
+  font-size: 0;
+}
+
+.page.theme_light .rec::after {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
