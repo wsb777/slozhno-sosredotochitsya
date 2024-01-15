@@ -61,6 +61,7 @@
 
 .page.theme_light .rec {
   color: var(--text-color);
+  font-size:0;
 }
 
 .page.theme_light .rec:before {
@@ -71,6 +72,7 @@
 .page.theme_light .rec:after {
   background-color: var(--text-color);
   box-shadow: var(--text-color);
+  display: none;
 }
 
 .page.theme_light .sentence-title::before {
@@ -103,14 +105,6 @@
 .page.theme_light .footer:before {
   border-left: 1px solid var(--text-color);
   border-bottom: 1px solid var(--text-color);
-}
-
-.page.theme_light .rec {
-  font-size: 0;
-}
-
-.page.theme_light .rec::after {
-  display: none;
 }
 
 @media (prefers-color-scheme: light) {
